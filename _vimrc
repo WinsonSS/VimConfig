@@ -18,10 +18,20 @@ map <Leader>w :w<CR>
 " 退出
 map <Leader>q :q<CR>
 " 切换到左边标签
-map <leader>h gT
+map gp gT
 " 切换到右边标签
-map <leader>l gt
+map gn gt
 " 复制到剪切板
 map <Leader>c "+y
 " 黏贴剪切板的内容
-map <leader>v i<c-v><esc>
+map <Leader>v i<C-v><ESC>
+
+"" VisualStudio 快捷键
+" 在当前文件查找,替换
+map <Leader>f :vsc Edit.Find<CR>
+map <Leader>h :vsc Edit.Replace<CR>
+" 插入注释
+map <Leader>/ :vsc Edit.InsertComment<CR>i
+" 回到上一个地方和下一个地方(即visual studio的NavigateBackward和NavigateForward)
+map nb :vsc View.NavigateBackward<CR>
+map nf :vsc View.NavigateForward<CR>
