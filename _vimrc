@@ -33,5 +33,5 @@ map <Leader>h :vsc Edit.Replace<CR>
 " 插入注释
 map <Leader>/ :vsc Edit.InsertComment<CR>i
 " 回到上一个地方和下一个地方(即visual studio的NavigateBackward和NavigateForward)
-map nb :vsc View.NavigateBackward<CR>
-map nf :vsc View.NavigateForward<CR>
+map gb :vsc View.NavigateBackward<CR>
+map gf :vsc View.NavigateForward<CR>
