@@ -26,12 +26,15 @@ map <Leader>c "+y
 " 黏贴剪切板的内容
 map <Leader>v i<C-v><ESC>
 
+" 非终端可沿用Ctrl+S保存文件
+imap <C-s> <ESC>:w<CR>a
+
 "" VisualStudio 快捷键
 " 在当前文件查找,替换
 map <Leader>f :vsc Edit.Find<CR>
 map <Leader>h :vsc Edit.Replace<CR>
 " 插入注释
-map <Leader>/ :vsc Edit.InsertComment<CR>i
+map <Leader>/ :vsc Edit.InsertComment<CR>a
 " 回到上一个地方和下一个地方(即visual studio的NavigateBackward和NavigateForward)
 map gb :vsc View.NavigateBackward<CR>
 map gf :vsc View.NavigateForward<CR>
