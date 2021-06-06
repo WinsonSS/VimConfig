@@ -27,7 +27,7 @@ map <Leader>c "+y
 map <Leader>v i<C-v><ESC>
 
 " 非终端可沿用Ctrl+S保存文件
-imap <C-s> <ESC>:w<CR>a
+imap <C-s> <ESC>:w<CR>
 
 "" VisualStudio 快捷键
 " 在当前文件查找,替换
