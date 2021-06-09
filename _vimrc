@@ -1,6 +1,3 @@
-" 默认窗口大小
-set lines=30 columns=80
-
 " 侦测文件类型
 filetype on
 
@@ -44,6 +41,7 @@ set cindent
 
 " 智能缩进
 set smartindent
+
 " 统一缩进为4
 set softtabstop=4
 set shiftwidth=4
@@ -61,19 +59,6 @@ set ignorecase
 " 有一个或以上大写字母时仍大小写敏感
 set smartcase 
 
-" 设置菜单语言
-set langmenu=zh_CN.UTF-8
-
-" 设置提示信息语言
-language messages zh_CN.utf-8
-
-" 字体设置
-"set guifont=Monaco:h12:cANSI
-
-" 编码设置
-set enc=utf-8
-set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
-
 " 不与vi兼容
 set nocp
 
@@ -82,19 +67,46 @@ set backspace=2
 
 " Esc快捷键
 :imap jj <ESC>
+
 " 保存
 map <Leader>w :w<CR>
+
 " 退出
 map <Leader>q :q<CR>
+
 " 切换到左边标签
 map gp gT
+
 " 切换到右边标签
 map gn gt
+
 " 复制到剪切板
 map <Leader>c "+y
+
 " 黏贴剪切板的内容
 map <Leader>v i<C-v><ESC>
 
-" 非终端可沿用Ctrl+S保存文件
-imap <C-s> <ESC>:w<CR>
+"插入模式下黏贴剪切板内容
 imap <C-v> <ESC>"+pa
+
+" GUI模式特定配置
+if has('gui_running')
+    " 默认窗口大小
+    set lines=40 columns=200
+
+    " 设置菜单语言
+    set langmenu=zh_CN.UTF-8
+
+    " 设置提示信息语言
+    language messages zh_CN.utf-8
+
+    " 字体设置
+    "set guifont=Monaco:h12:cANSI
+
+    " 编码设置
+    set enc=utf-8
+    set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
+
+    "保存
+    imap <C-s> <ESC>:w<CR>
+endif
