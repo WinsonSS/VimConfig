@@ -1,0 +1,39 @@
+" 设置行号
+set number
+" 设置leader键
+let mapleader = ";"
+" 搜索高亮
+set hlsearch
+" 随着输入即时搜索
+set incsearch
+" 搜索忽略大小写
+set ignorecase 
+" 有一个或以上大写字母时仍大小写敏感
+set smartcase 
+
+" Esc快捷键
+:inoremap jj <ESC>
+" 保存
+noremap <Leader>w :w<CR>
+" 退出
+noremap <Leader>q :q<CR>
+" 切换到左边标签
+noremap gp gT
+" 切换到右边标签
+noremap gn gt
+" 复制到剪切板
+noremap <Leader>c "+y
+"ideaVim黏贴
+inoremap <C-v> <S-Insert>
+cnoremap <C-v> <S-Insert>
+
+"" VisualStudio 快捷键
+" 在当前文件查找,替换
+"map <Leader>f :vsc Edit.Find<CR>
+"map <Leader>h :vsc Edit.Replace<CR>
+" 插入注释
+"map <Leader>/ :vsc Edit.InsertComment<CR>a
+" 回到上一个地方和下一个地方(即visual studio的NavigateBackward和NavigateForward)
+"map gb :vsc View.NavigateBackward<CR>
+"map gf :vsc View.NavigateForward<CR>
+

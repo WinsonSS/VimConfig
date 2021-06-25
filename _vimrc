@@ -69,25 +69,19 @@ set backspace=2
 :imap jj <ESC>
 
 " 保存
-map <Leader>w :w<CR>
+noremap <Leader>w :w<CR>
 
 " 退出
-map <Leader>q :q<CR>
+noremap <Leader>q :q<CR>
 
 " 切换到左边标签
-map gp gT
+noremap gp gT
 
 " 切换到右边标签
-map gn gt
+noremap gn gt
 
 " 复制到剪切板
-map <Leader>c "+y
-
-" 黏贴剪切板的内容
-map <Leader>v i<C-v><ESC>
-
-"插入模式下黏贴剪切板内容
-imap <C-v> <ESC>"+pa
+noremap <Leader>c "+y
 
 " GUI模式特定配置
 if has('gui_running')
@@ -108,5 +102,9 @@ if has('gui_running')
     set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
 
     "保存
-    imap <C-s> <ESC>:w<CR>
+    inoremap <C-s> <ESC>:w<CR>
+    "插入模式下黏贴剪切板内容
+    imap <C-v> <S-Insert>
+    cmap <C-v> <S-Insert>
+
 endif
