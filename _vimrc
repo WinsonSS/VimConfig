@@ -80,13 +80,22 @@ noremap gp gT
 " 切换到右边标签
 noremap gn gt
 
+"禁止错误提示音
+"set noeb
+
+"用闪屏代替错误提示音
+set vb t_vb=
+
 " 复制到剪切板
 noremap <Leader>c "+y
+
+" 从剪切板黏贴
+cnoremap <C-v> <S-Insert>
 
 " GUI模式特定配置
 if has('gui_running')
     " 默认窗口大小
-    set lines=40 columns=200
+    set lines=45 columns=120
 
     " 设置菜单语言
     set langmenu=zh_CN.UTF-8
